@@ -11,9 +11,11 @@
 body {
     display: flex;
     justify-content: center;
-    padding: 2rem 10px 0;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 10px 0;
     font-family: 'roboto';
-    background-color: green;
+    background-color: #34db7a;
     text-align: center;
 }
 
