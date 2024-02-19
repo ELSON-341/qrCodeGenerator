@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: roboto;
 }
 
 body {
@@ -13,62 +14,77 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 0 10px 0;
-    font-family: 'roboto';
     background-color: #34db7a;
+}
+
+main.container {
+    background-color: white;
+    width: 400px;
+    height: 260px;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.2s;
+}
+
+main.container.active{
+    height: 500px;
+}
+
+header {
     text-align: center;
 }
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 390px;
-    background-color: white;
-    border-radius: 1rem;
-    gap: 1.5rem;
-    padding: 1rem 1.5rem;
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
-header h1 {
-    margin-bottom: 15px;
+header p {
+    color: #444;
+    font-size: 0.9rem;
 }
 
 div#qr-input {
+    margin: 20px 15px;
+}
+
+div#qr-input input,
+div#qr-input button {
     width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
 }
 
 div#qr-input input {
-    display: block;
-    width: 100%;
-    margin: auto;
-    height: 60px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    font-size: 15px;
-    padding: 0.5rem 1.5rem;
+    border: 1px solid #777;
+    padding: 10px 15px;
 }
 
 div#qr-input button {
-    margin-top: 20px;
-    width: 100%;
-    font-weight: bolder;
-    font-size: 20px;
-    background-color: green;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background-color: #086824;
     color: white;
-    padding: 1rem;
+    font-size: 1.2rem;
+    margin-top: 20px;
     cursor: pointer;
+    opacity: 0.9;
+    transition: 0.4s;
 }
 
 div#qr-input button:hover {
- background-color: rgb(11, 182, 11);
+    opacity: 1;
 }
 
 div#qr-code {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    padding: 30px 0;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    width: 100%;
-    padding: 1rem;
+    transition: 0.5s;
+}
+
+main.container.active div#qr-code {
+    opacity: 1;
 }
